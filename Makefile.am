@@ -4,10 +4,10 @@
 # All rights reserved.
 
 ### Initialize global variables used throughout the file ###
-INCLUDE_DIRS    = -I$(srcdir)/src -I$(srcdir)/include/tss2
+INCLUDE_DIRS	= -I$(srcdir)/src -I$(srcdir)/include/tss2
 ACLOCAL_AMFLAGS = -I m4 --install
-AM_CFLAGS       = $(INCLUDE_DIRS) $(EXTRA_CFLAGS) $(CODE_COVERAGE_CFLAGS)
-AM_LDFLAGS      = $(EXTRA_LDFLAGS) $(CODE_COVERAGE_LIBS)
+AM_CFLAGS	   = $(INCLUDE_DIRS) $(EXTRA_CFLAGS) $(CODE_COVERAGE_CFLAGS)
+AM_LDFLAGS	  = $(EXTRA_LDFLAGS) $(CODE_COVERAGE_LIBS)
 
 # Initialize empty variables to be extended throughout
 lib_LTLIBRARIES =
@@ -38,115 +38,115 @@ MOSTLYCLEANFILES += $(DX_CLEANFILES)
 
 if DOXYMAN
 DOXYMAN3 = \
-    doxygen-doc/man/ESYS_CONTEXT.3 \
-    doxygen-doc/man/ESYS_TR.3 \
-    doxygen-doc/man/ESYS_TR_defines.3 \
-    doxygen-doc/man/Esys_ActivateCredential.3 \
-    doxygen-doc/man/Esys_Certify.3 \
-    doxygen-doc/man/Esys_CertifyCreation.3 \
-    doxygen-doc/man/Esys_ChangeEPS.3 \
-    doxygen-doc/man/Esys_ChangePPS.3 \
-    doxygen-doc/man/Esys_Clear.3 \
-    doxygen-doc/man/Esys_ClearControl.3 \
-    doxygen-doc/man/Esys_ClockRateAdjust.3 \
-    doxygen-doc/man/Esys_ClockSet.3 \
-    doxygen-doc/man/Esys_Commit.3 \
-    doxygen-doc/man/Esys_ContextLoad.3 \
-    doxygen-doc/man/Esys_ContextSave.3 \
-    doxygen-doc/man/Esys_Create.3 \
-    doxygen-doc/man/Esys_CreatePrimary.3 \
-    doxygen-doc/man/Esys_DictionaryAttackLockReset.3 \
-    doxygen-doc/man/Esys_DictionaryAttackParameters.3 \
-    doxygen-doc/man/Esys_Duplicate.3 \
-    doxygen-doc/man/Esys_ECC_Parameters.3 \
-    doxygen-doc/man/Esys_ECDH_KeyGen.3 \
-    doxygen-doc/man/Esys_ECDH_ZGen.3 \
-    doxygen-doc/man/Esys_EC_Ephemeral.3 \
-    doxygen-doc/man/Esys_EncryptDecrypt.3 \
-    doxygen-doc/man/Esys_EventSequenceComplete.3 \
-    doxygen-doc/man/Esys_EvictControl.3 \
-    doxygen-doc/man/Esys_FlushContext.3 \
-    doxygen-doc/man/Esys_GetCapability.3 \
-    doxygen-doc/man/Esys_GetCommandAuditDigest.3 \
-    doxygen-doc/man/Esys_GetRandom.3 \
-    doxygen-doc/man/Esys_GetSessionAuditDigest.3 \
-    doxygen-doc/man/Esys_GetTestResult.3 \
-    doxygen-doc/man/Esys_GetTime.3 \
-    doxygen-doc/man/Esys_Hash.3 \
-    doxygen-doc/man/Esys_HashSequenceStart.3 \
-    doxygen-doc/man/Esys_HierarchyChangeAuth.3 \
-    doxygen-doc/man/Esys_HierarchyControl.3 \
-    doxygen-doc/man/Esys_HMAC.3 \
-    doxygen-doc/man/Esys_HMAC_Start.3 \
-    doxygen-doc/man/Esys_Import.3 \
-    doxygen-doc/man/Esys_IncrementalSelfTest.3 \
-    doxygen-doc/man/Esys_Load.3 \
-    doxygen-doc/man/Esys_LoadExternal.3 \
-    doxygen-doc/man/Esys_MakeCredential.3 \
-    doxygen-doc/man/Esys_NV_Certify.3 \
-    doxygen-doc/man/Esys_NV_ChangeAuth.3 \
-    doxygen-doc/man/Esys_NV_DefineSpace.3 \
-    doxygen-doc/man/Esys_NV_Extend.3 \
-    doxygen-doc/man/Esys_NV_GlobalWriteLock.3 \
-    doxygen-doc/man/Esys_NV_Increment.3 \
-    doxygen-doc/man/Esys_NV_Read.3 \
-    doxygen-doc/man/Esys_NV_ReadLock.3 \
-    doxygen-doc/man/Esys_NV_ReadPublic.3 \
-    doxygen-doc/man/Esys_NV_SetBits.3 \
-    doxygen-doc/man/Esys_NV_UndefineSpace.3 \
-    doxygen-doc/man/Esys_NV_UndefineSpaceSpecial.3 \
-    doxygen-doc/man/Esys_NV_Write.3 \
-    doxygen-doc/man/Esys_NV_WriteLock.3 \
-    doxygen-doc/man/Esys_ObjectChangeAuth.3 \
-    doxygen-doc/man/Esys_PCR_Allocate.3 \
-    doxygen-doc/man/Esys_PCR_Event.3 \
-    doxygen-doc/man/Esys_PCR_Extend.3 \
-    doxygen-doc/man/Esys_PCR_Read.3 \
-    doxygen-doc/man/Esys_PCR_Reset.3 \
-    doxygen-doc/man/Esys_PCR_SetAuthPolicy.3 \
-    doxygen-doc/man/Esys_PCR_SetAuthValue.3 \
-    doxygen-doc/man/Esys_PolicyAuthorize.3 \
-    doxygen-doc/man/Esys_PolicyAuthValue.3 \
-    doxygen-doc/man/Esys_PolicyCommandCode.3 \
-    doxygen-doc/man/Esys_PolicyCounterTimer.3 \
-    doxygen-doc/man/Esys_PolicyCpHash.3 \
-    doxygen-doc/man/Esys_PolicyDuplicationSelect.3 \
-    doxygen-doc/man/Esys_PolicyGetDigest.3 \
-    doxygen-doc/man/Esys_PolicyLocality.3 \
-    doxygen-doc/man/Esys_PolicyNameHash.3 \
-    doxygen-doc/man/Esys_PolicyNV.3 \
-    doxygen-doc/man/Esys_PolicyNvWritten.3 \
-    doxygen-doc/man/Esys_PolicyOR.3 \
-    doxygen-doc/man/Esys_PolicyPassword.3 \
-    doxygen-doc/man/Esys_PolicyPCR.3 \
-    doxygen-doc/man/Esys_PolicyPhysicalPresence.3 \
-    doxygen-doc/man/Esys_PolicyRestart.3 \
-    doxygen-doc/man/Esys_PolicySecret.3 \
-    doxygen-doc/man/Esys_PolicySigned.3 \
-    doxygen-doc/man/Esys_PolicyTicket.3 \
-    doxygen-doc/man/Esys_PP_Commands.3 \
-    doxygen-doc/man/Esys_Quote.3 \
-    doxygen-doc/man/Esys_ReadClock.3 \
-    doxygen-doc/man/Esys_ReadPublic.3 \
-    doxygen-doc/man/Esys_Rewrap.3 \
-    doxygen-doc/man/Esys_RSA_Decrypt.3 \
-    doxygen-doc/man/Esys_RSA_Encrypt.3 \
-    doxygen-doc/man/Esys_SelfTest.3 \
-    doxygen-doc/man/Esys_SequenceComplete.3 \
-    doxygen-doc/man/Esys_SequenceUpdate.3 \
-    doxygen-doc/man/Esys_SetAlgorithmSet.3 \
-    doxygen-doc/man/Esys_SetCommandCodeAuditStatus.3 \
-    doxygen-doc/man/Esys_SetPrimaryPolicy.3 \
-    doxygen-doc/man/Esys_Shutdown.3 \
-    doxygen-doc/man/Esys_Sign.3 \
-    doxygen-doc/man/Esys_StartAuthSession.3 \
-    doxygen-doc/man/Esys_Startup.3 \
-    doxygen-doc/man/Esys_StirRandom.3 \
-    doxygen-doc/man/Esys_TestParms.3 \
-    doxygen-doc/man/Esys_Unseal.3 \
-    doxygen-doc/man/Esys_Vendor_TCG_Test.3 \
-    doxygen-doc/man/Esys_VerifySignature.3 \
-    doxygen-doc/man/Esys_ZGen_2Phase.3
+	doxygen-doc/man/ESYS_CONTEXT.3 \
+	doxygen-doc/man/ESYS_TR.3 \
+	doxygen-doc/man/ESYS_TR_defines.3 \
+	doxygen-doc/man/Esys_ActivateCredential.3 \
+	doxygen-doc/man/Esys_Certify.3 \
+	doxygen-doc/man/Esys_CertifyCreation.3 \
+	doxygen-doc/man/Esys_ChangeEPS.3 \
+	doxygen-doc/man/Esys_ChangePPS.3 \
+	doxygen-doc/man/Esys_Clear.3 \
+	doxygen-doc/man/Esys_ClearControl.3 \
+	doxygen-doc/man/Esys_ClockRateAdjust.3 \
+	doxygen-doc/man/Esys_ClockSet.3 \
+	doxygen-doc/man/Esys_Commit.3 \
+	doxygen-doc/man/Esys_ContextLoad.3 \
+	doxygen-doc/man/Esys_ContextSave.3 \
+	doxygen-doc/man/Esys_Create.3 \
+	doxygen-doc/man/Esys_CreatePrimary.3 \
+	doxygen-doc/man/Esys_DictionaryAttackLockReset.3 \
+	doxygen-doc/man/Esys_DictionaryAttackParameters.3 \
+	doxygen-doc/man/Esys_Duplicate.3 \
+	doxygen-doc/man/Esys_ECC_Parameters.3 \
+	doxygen-doc/man/Esys_ECDH_KeyGen.3 \
+	doxygen-doc/man/Esys_ECDH_ZGen.3 \
+	doxygen-doc/man/Esys_EC_Ephemeral.3 \
+	doxygen-doc/man/Esys_EncryptDecrypt.3 \
+	doxygen-doc/man/Esys_EventSequenceComplete.3 \
+	doxygen-doc/man/Esys_EvictControl.3 \
+	doxygen-doc/man/Esys_FlushContext.3 \
+	doxygen-doc/man/Esys_GetCapability.3 \
+	doxygen-doc/man/Esys_GetCommandAuditDigest.3 \
+	doxygen-doc/man/Esys_GetRandom.3 \
+	doxygen-doc/man/Esys_GetSessionAuditDigest.3 \
+	doxygen-doc/man/Esys_GetTestResult.3 \
+	doxygen-doc/man/Esys_GetTime.3 \
+	doxygen-doc/man/Esys_Hash.3 \
+	doxygen-doc/man/Esys_HashSequenceStart.3 \
+	doxygen-doc/man/Esys_HierarchyChangeAuth.3 \
+	doxygen-doc/man/Esys_HierarchyControl.3 \
+	doxygen-doc/man/Esys_HMAC.3 \
+	doxygen-doc/man/Esys_HMAC_Start.3 \
+	doxygen-doc/man/Esys_Import.3 \
+	doxygen-doc/man/Esys_IncrementalSelfTest.3 \
+	doxygen-doc/man/Esys_Load.3 \
+	doxygen-doc/man/Esys_LoadExternal.3 \
+	doxygen-doc/man/Esys_MakeCredential.3 \
+	doxygen-doc/man/Esys_NV_Certify.3 \
+	doxygen-doc/man/Esys_NV_ChangeAuth.3 \
+	doxygen-doc/man/Esys_NV_DefineSpace.3 \
+	doxygen-doc/man/Esys_NV_Extend.3 \
+	doxygen-doc/man/Esys_NV_GlobalWriteLock.3 \
+	doxygen-doc/man/Esys_NV_Increment.3 \
+	doxygen-doc/man/Esys_NV_Read.3 \
+	doxygen-doc/man/Esys_NV_ReadLock.3 \
+	doxygen-doc/man/Esys_NV_ReadPublic.3 \
+	doxygen-doc/man/Esys_NV_SetBits.3 \
+	doxygen-doc/man/Esys_NV_UndefineSpace.3 \
+	doxygen-doc/man/Esys_NV_UndefineSpaceSpecial.3 \
+	doxygen-doc/man/Esys_NV_Write.3 \
+	doxygen-doc/man/Esys_NV_WriteLock.3 \
+	doxygen-doc/man/Esys_ObjectChangeAuth.3 \
+	doxygen-doc/man/Esys_PCR_Allocate.3 \
+	doxygen-doc/man/Esys_PCR_Event.3 \
+	doxygen-doc/man/Esys_PCR_Extend.3 \
+	doxygen-doc/man/Esys_PCR_Read.3 \
+	doxygen-doc/man/Esys_PCR_Reset.3 \
+	doxygen-doc/man/Esys_PCR_SetAuthPolicy.3 \
+	doxygen-doc/man/Esys_PCR_SetAuthValue.3 \
+	doxygen-doc/man/Esys_PolicyAuthorize.3 \
+	doxygen-doc/man/Esys_PolicyAuthValue.3 \
+	doxygen-doc/man/Esys_PolicyCommandCode.3 \
+	doxygen-doc/man/Esys_PolicyCounterTimer.3 \
+	doxygen-doc/man/Esys_PolicyCpHash.3 \
+	doxygen-doc/man/Esys_PolicyDuplicationSelect.3 \
+	doxygen-doc/man/Esys_PolicyGetDigest.3 \
+	doxygen-doc/man/Esys_PolicyLocality.3 \
+	doxygen-doc/man/Esys_PolicyNameHash.3 \
+	doxygen-doc/man/Esys_PolicyNV.3 \
+	doxygen-doc/man/Esys_PolicyNvWritten.3 \
+	doxygen-doc/man/Esys_PolicyOR.3 \
+	doxygen-doc/man/Esys_PolicyPassword.3 \
+	doxygen-doc/man/Esys_PolicyPCR.3 \
+	doxygen-doc/man/Esys_PolicyPhysicalPresence.3 \
+	doxygen-doc/man/Esys_PolicyRestart.3 \
+	doxygen-doc/man/Esys_PolicySecret.3 \
+	doxygen-doc/man/Esys_PolicySigned.3 \
+	doxygen-doc/man/Esys_PolicyTicket.3 \
+	doxygen-doc/man/Esys_PP_Commands.3 \
+	doxygen-doc/man/Esys_Quote.3 \
+	doxygen-doc/man/Esys_ReadClock.3 \
+	doxygen-doc/man/Esys_ReadPublic.3 \
+	doxygen-doc/man/Esys_Rewrap.3 \
+	doxygen-doc/man/Esys_RSA_Decrypt.3 \
+	doxygen-doc/man/Esys_RSA_Encrypt.3 \
+	doxygen-doc/man/Esys_SelfTest.3 \
+	doxygen-doc/man/Esys_SequenceComplete.3 \
+	doxygen-doc/man/Esys_SequenceUpdate.3 \
+	doxygen-doc/man/Esys_SetAlgorithmSet.3 \
+	doxygen-doc/man/Esys_SetCommandCodeAuditStatus.3 \
+	doxygen-doc/man/Esys_SetPrimaryPolicy.3 \
+	doxygen-doc/man/Esys_Shutdown.3 \
+	doxygen-doc/man/Esys_Sign.3 \
+	doxygen-doc/man/Esys_StartAuthSession.3 \
+	doxygen-doc/man/Esys_Startup.3 \
+	doxygen-doc/man/Esys_StirRandom.3 \
+	doxygen-doc/man/Esys_TestParms.3 \
+	doxygen-doc/man/Esys_Unseal.3 \
+	doxygen-doc/man/Esys_Vendor_TCG_Test.3 \
+	doxygen-doc/man/Esys_VerifySignature.3 \
+	doxygen-doc/man/Esys_ZGen_2Phase.3
 $(DOXYMAN3): doxygen-doc
 else #DOXYMAN
 DOXYMAN3 =
@@ -168,17 +168,17 @@ udevrules_DATA   = dist/tpm-udev.rules
 
 # Adding user and developer information
 EXTRA_DIST += \
-    CHANGELOG.md \
-    CONTRIBUTING.md \
-    INSTALL.md \
-    LICENSE \
-    README.md \
-    RELEASE.md
+	CHANGELOG.md \
+	CONTRIBUTING.md \
+	INSTALL.md \
+	LICENSE \
+	README.md \
+	RELEASE.md
 
 # Generate the AUTHORS file from git log
 AUTHORS :
 	$(AM_V_GEN)git log --format='%aN <%aE>' | grep -v 'users.noreply.github.com' | sort | \
-	    uniq -c | sort -nr | sed 's/^\s*//' | cut -d" " -f2- > $@
+	 uniq -c | sort -nr | sed 's/^\s*//' | cut -d" " -f2- > $@
 EXTRA_DIST += AUTHORS
 CLEANFILES += AUTHORS
 
@@ -189,9 +189,9 @@ DISTCLEANFILES += $(pkgconfig_DATA)
 # Base TSS2 headers
 tss2dir = $(includedir)/tss2
 tss2_HEADERS = \
-    $(srcdir)/include/tss2/tss2_common.h \
-    $(srcdir)/include/tss2/tss2_tcti.h \
-    $(srcdir)/include/tss2/tss2_tpm2_types.h
+	$(srcdir)/include/tss2/tss2_common.h \
+	$(srcdir)/include/tss2/tss2_tcti.h \
+	$(srcdir)/include/tss2/tss2_tpm2_types.h
 
 ### Internal utility library
 libutil = libutil.la
@@ -225,8 +225,8 @@ src_tss2_tcti_libtss2_tcti_device_la_LDFLAGS  = -Wl,--version-script=$(srcdir)/l
 endif # HAVE_LD_VERSION_SCRIPT
 src_tss2_tcti_libtss2_tcti_device_la_LIBADD   = $(libtss2_mu) $(libutil)
 src_tss2_tcti_libtss2_tcti_device_la_SOURCES  = \
-    src/tss2-tcti/tcti-common.c \
-    src/tss2-tcti/tcti-device.c
+	src/tss2-tcti/tcti-common.c \
+	src/tss2-tcti/tcti-device.c
 endif # ENABLE_TCTI_DEVICE
 
 # tcti library for Microsoft TPM2 simulator
@@ -242,8 +242,8 @@ src_tss2_tcti_libtss2_tcti_mssim_la_LDFLAGS  = -Wl,--version-script=$(srcdir)/li
 endif # HAVE_LD_VERSION_SCRIPT
 src_tss2_tcti_libtss2_tcti_mssim_la_LIBADD   = $(libtss2_mu) $(libutil)
 src_tss2_tcti_libtss2_tcti_mssim_la_SOURCES  = \
-    src/tss2-tcti/tcti-common.c \
-    src/tss2-tcti/tcti-mssim.c
+	src/tss2-tcti/tcti-common.c \
+	src/tss2-tcti/tcti-mssim.c
 endif # ENABLE_TCTI_MSSIM
 
 ### TCG TSS SAPI spec library ###
@@ -254,7 +254,7 @@ pkgconfig_DATA += lib/tss2-sys.pc
 
 src_tss2_sys_libtss2_sys_la_CFLAGS = $(AM_CFLAGS) -I$(srcdir)/src/tss2-sys
 src_tss2_sys_libtss2_sys_la_LDFLAGS = $(AM_LDFLAGS) $(LIBSOCKET_LDFLAGS) \
-                                      -Wl,--version-script=$(srcdir)/lib/tss2-sys.map
+									  -Wl,--version-script=$(srcdir)/lib/tss2-sys.map
 src_tss2_sys_libtss2_sys_la_LIBADD = $(libtss2_mu) $(libutil)
 src_tss2_sys_libtss2_sys_la_SOURCES = $(TSS2_SYS_SRC)
 EXTRA_DIST += lib/tss2-sys.map
@@ -268,20 +268,20 @@ pkgconfig_DATA += lib/tss2-esys.pc
 
 
 src_tss2_esys_libtss2_esys_la_LIBADD  = $(libtss2_sys) $(libtss2_mu) \
-    $(libtss2_tcti_device) $(libtss2_tcti_mssim) $(libutil)
+	$(libtss2_tcti_device) $(libtss2_tcti_mssim) $(libutil)
 
 if ESYS_OSSL
 TSS2_ESYS_SRC_CRYPTO = src/tss2-esys/esys_crypto_ossl.h src/tss2-esys/esys_crypto_ossl.c
 src_tss2_esys_libtss2_esys_la_CFLAGS  = $(AM_CFLAGS) -I$(srcdir)/src/tss2-esys -DOSSL \
-    $(LIBSSL_CFLAGS) $(LIBCRYPTO_CFLAGS)
+	$(LIBSSL_CFLAGS) $(LIBCRYPTO_CFLAGS)
 src_tss2_esys_libtss2_esys_la_LDFLAGS = $(AM_LDFLAGS) $(LIBDL_LDFLAGS) $(LIBSOCKET_LDFLAGS) \
-    $(LIBSSL_LIBS) $(LIBCRYPTO_LIBS) -Wl,--version-script=$(srcdir)/lib/tss2-esys.map
+	$(LIBSSL_LIBS) $(LIBCRYPTO_LIBS) -Wl,--version-script=$(srcdir)/lib/tss2-esys.map
 else
 if ESYS_GCRYPT
 TSS2_ESYS_SRC_CRYPTO = src/tss2-esys/esys_crypto_gcrypt.h src/tss2-esys/esys_crypto_gcrypt.c
 src_tss2_esys_libtss2_esys_la_CFLAGS  = $(AM_CFLAGS) -I$(srcdir)/src/tss2-esys
 src_tss2_esys_libtss2_esys_la_LDFLAGS = $(AM_LDFLAGS) $(LIBDL_LDFLAGS) $(LIBSOCKET_LDFLAGS) \
-                                        -lgcrypt -Wl,--version-script=$(srcdir)/lib/tss2-esys.map
+										-lgcrypt -Wl,--version-script=$(srcdir)/lib/tss2-esys.map
 endif
 endif
 
@@ -310,23 +310,23 @@ uninstall-local:
 endif
 
 EXTRA_DIST += \
-    doc/doxygen.dox \
-    doc/coding_standard_c.md \
-    doc/logging.md \
-    doc/fuzzing.md \
-    man/man-postlude.troff \
-    man/Tss2_Tcti_Device_Init.3.in \
-    man/Tss2_Tcti_Mssim_Init.3.in \
-    man/tss2-tcti-device.7.in \
-    man/tss2-tcti-mssim.7.in
+	doc/doxygen.dox \
+	doc/coding_standard_c.md \
+	doc/logging.md \
+	doc/fuzzing.md \
+	man/man-postlude.troff \
+	man/Tss2_Tcti_Device_Init.3.in \
+	man/Tss2_Tcti_Mssim_Init.3.in \
+	man/tss2-tcti-device.7.in \
+	man/tss2-tcti-mssim.7.in
 
 CLEANFILES += \
-    $(man3_MANS) \
-    $(man7_MANS)
+	$(man3_MANS) \
+	$(man7_MANS)
 
 ### Helper Functions ###
 define make_parent_dir
-    if [ ! -d $(dir $1) ]; then mkdir -p $(dir $1); fi
+	if [ ! -d $(dir $1) ]; then mkdir -p $(dir $1); fi
 endef
 
 # function to transform man .in files to man pages
@@ -334,7 +334,7 @@ endef
 # $2: .in file
 # $3: man postlude file
 define make_man
-    $(call make_parent_dir,$1) && \
-    cat $2 $3 > $1 && \
-    sed -i -e "s,[@]VERSION[@],$(PACKAGE_VERSION),g;" $1
+	$(call make_parent_dir,$1) && \
+	cat $2 $3 > $1 && \
+	sed -i -e "s,[@]VERSION[@],$(PACKAGE_VERSION),g;" $1
 endef
